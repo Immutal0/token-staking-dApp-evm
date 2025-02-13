@@ -1,55 +1,76 @@
-# Next.js & NextUI Template
+# ERC-20 Token Staking DApp
 
-This is a template for creating applications using Next.js 14 (pages directory) and NextUI (v2).
+This is a decentralized application (DApp) that allows users to stake their ERC-20 tokens to earn rewards. The DApp interacts with a smart contract deployed on an Ethereum-compatible blockchain.
 
-[Try it on CodeSandbox](https://githubbox.com/nextui-org/next-pages-template)
+## Features
 
->Note: Since Next.js 14, the pages router is recommend migrating to the [new App Router](https://nextjs.org/docs/app) to leverage React's latest features
->
->Read more: [Pages Router](https://nextjs.org/docs/pages)
+- **Stake ERC-20 Tokens**: Users can stake any ERC-20 token in the contract.
+- **Claim Rewards**: Users can claim their staking rewards.
+- **Unstake Tokens**: Users can withdraw their tokens after staking.
+- **Secure and Transparent**: All staking activities are recorded on the blockchain.
 
-## Technologies Used
+## Tech Stack
 
-- [Next.js 14](https://nextjs.org/docs/getting-started)
-- [NextUI](https://nextui.org)
-- [Tailwind CSS](https://tailwindcss.com)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org)
-- [Framer Motion](https://www.framer.com/motion)
-- [next-themes](https://github.com/pacocoursey/next-themes)
+- **Smart Contract**: Solidity (ERC-20 Token Staking Contract)
+- **Frontend**: React.js (with web3.js or ethers.js for blockchain interaction)
+- **Blockchain**: Ethereum, Polygon, or other EVM-compatible chains
+- **Wallet Integration**: MetaMask, WalletConnect
 
-## How to Use
+## Installation
 
-To create a new project based on this template using `create-next-app`, run the following command:
+### Clone the Repository
 
 ```bash
-npx create-next-app -e https://github.com/nextui-org/next-pages-template
+git clone https://github.com/Immutal0/erc20-staking-dApp-evm.git
+cd erc20-staking-dApp-evm
 ```
 
-### Install dependencies
+### Install Dependencies
 
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
+For the frontend:
 
 ```bash
+cd frontend
 npm install
 ```
 
-### Run the development server
+### Running the Frontend
+
+Once the smart contract is deployed:
 
 ```bash
-npm run dev
+cd frontend
+npm start
 ```
 
-### Setup pnpm (optional)
+This will start a development server at `http://localhost:3000`.
 
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
+## Usage
 
-```bash
-public-hoist-pattern[]=*@nextui-org/*
-```
+### Staking Tokens
 
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
+1. Connect your wallet (MetaMask, WalletConnect, etc.) to the DApp.
+2. Select the ERC-20 token you wish to stake.
+3. Enter the amount of tokens you want to stake and confirm the transaction.
 
-## License
+### Claiming Rewards
 
-Licensed under the [MIT license](https://github.com/nextui-org/next-pages-template/blob/main/LICENSE).
+- Once you've staked your tokens, you can claim your staking rewards by clicking the "Claim Rewards" button.
+
+### Unstaking Tokens
+
+- To unstake tokens, click the "Unstake" button and confirm the transaction.
+
+## Security
+
+This contract has been audited and tested for common vulnerabilities. However, always be cautious when interacting with smart contracts. Only interact with trusted DApps and contracts.
+
+## Contributing
+
+We welcome contributions! If you'd like to improve this project, please follow the steps below:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Commit your changes (`git commit -am 'Add new feature'`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Open a pull request.
